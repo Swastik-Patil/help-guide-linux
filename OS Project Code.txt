@@ -1,0 +1,78 @@
+while [ NAME ]; 
+do
+    echo "Enter the command: "
+    read cmd_name
+    if [ $cmd_name == "pwd" ]
+    then
+    echo "Print Current Working Directory"
+    echo "Use the pwd command to find out the path of the current working directory (folder) you’re in."
+    elif [ $cmd_name == "cd" ];
+    then
+      echo "Change Current Working Directory"
+      echo "To navigate through the Linux files and directories, use the cd command."
+    elif [ $cmd_name == "mkdir" ];
+    then
+      echo "Create a New Directory"
+    elif [ $cmd_name == "ls" ];
+    then
+      echo "The ls command is used to view the contents of a directory"
+    elif [ $cmd_name == "cat" ];
+    then
+      echo "cat ( Short for concatenate )."
+      echo "It is used to list the contents of a file on the standard output."
+    elif [ $cmd_name == "cp" ];
+    then
+      echo "Use the cp command to copy files from the current directory to a different directory."
+    elif [ $cmd_name == "mv" ];
+    then
+      echo "The primary use of the mv command is to move files, although it can also be used to rename files."
+    elif [ $cmd_name == "rm" ];
+    then
+      echo "The rm command is used to delete directories and the contents within them."
+    elif [ $cmd_name == "rmdir" ];
+    then
+      echo "If you need to delete a directory, use the rmdir command."
+    elif [ $cmd_name == "touch" ];
+    then
+      echo "The touch command allows you to create a blank new file."
+    elif [ $cmd_name == "locate" ];
+    then
+      echo "You can use this command to locate a file.just like the search command in Windows."
+    elif [ $cmd_name == "grep" ];
+    then
+      echo "It lets you search through all the text in a given file."
+    elif [ $cmd_name == "chmod" ];
+    then
+      echo "Used to change the read, write, and execute permissions of files and directories."
+    elif [ $cmd_name == "sudo" ];
+    then
+      echo "Short for SuperUser Do , this command enables you to perform tasks that require administrative or root permissions."
+    elif [ $cmd_name == "ping" ];
+    then
+      echo "Use the ping command to check your connectivity status to a server."
+    elif [ $cmd_name == "echo" ];
+    then
+      echo "his command is used to move some data into a file."
+    elif [ $cmd_name == "zip" ];
+    then
+      echo "Use the zip command to compress your files into a zip archive."
+    elif [ $cmd_name == "unzip" ];
+    then
+      echo "Use the unzip command to extract the zipped files from a zip archive."
+    else
+    echo "I am someone else"
+    fi
+    sleep 5
+    echo "Do You Want to continue ( Y / N )"
+    read str
+    if [ $str == "Y" ]
+    then 
+        NAME=true
+    elif [ $str == "N" ]
+    then 
+        exit
+    else
+        echo " Oops !! Wrong choice "
+	exit
+    fi
+done
